@@ -120,7 +120,10 @@ def main():
 
     update_live_video(live_video_label)
 
-    show_placeholder(image_label)
+    try:
+        show_placeholder(image_label)
+    except cv2.error:
+        pass
 
     window.mainloop()
 
